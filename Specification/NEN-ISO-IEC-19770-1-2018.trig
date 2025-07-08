@@ -1,0 +1,1048 @@
+prefix nen-iso-iec-19770-1-2018: <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016/model/concept/>
+prefix dcm:                      <http://purl.org/dc/dcmitype/>
+prefix dct:                      <http://purl.org/dc/terms/>
+prefix foaf:                     <http://xmlns.com/foaf/0.1/>
+prefix graph:                    <http://example.com/graph#>
+prefix owl:                      <http://www.w3.org/2002/07/owl#>
+prefix rdf:                      <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+prefix rdfs:                     <http://www.w3.org/2000/01/rdf-schema#>
+prefix respec:                   <https://respec.org/ontorespec/model/def/>
+prefix sh:                       <http://www.w3.org/ns/shacl#>
+prefix skos:                     <http://www.w3.org/2004/02/skos/core#>
+prefix status:                   <http://purl.org/adms/status/>
+prefix vann:                     <http://purl.org/vocab/vann/>
+prefix void:                     <http://rdfs.org/ns/void#>
+prefix xsd:                      <http://www.w3.org/2001/XMLSchema#>
+
+nen-iso-iec-19770-1-2018: {
+  nen-iso-iec-19770-1-2018:
+    a
+    owl:Ontology,
+    void:Dataset;
+    dct:created '2025-05-01'^^xsd:date;
+    dct:creator 'Flores Bakker' ;
+    dct:publisher <https://www.nen.nl> ;
+    dct:contributor <https://www.nen.nl> ; 
+    dct:title 'NEN-ISO/IEC 19770-1:2018 ontology - IT asset management'@en ;
+
+    dct:abstract '''This ontology models the international standard NEN-ISO/IEC 19770-1:2018 regarding IT asset management. NEN-ISO/IEC 19770-1:2018 itself provides a framework for implementing and managing IT asset management systems within organizations and is published by the Dutch standards organization NEN. The NEN standard offers terms and definitions for key concepts, including assets, data, hardware, software, and their management. The ontology in turn models these terms and definitions through the use of the SKOS-vocabulary, making these terms interoperable, easily referenceable, and shareable within information technology systems and documentation. This supports the adoption of the NEN-ISO/IEC 19770-1:2018 standard and enhances its integration with other standards and IT asset management practices. The ontology itself, although modeling an official standard, has an informal status. It is published by the Dutch Ministry of Finance, with the kind approval of the NEN. '''@en ;
+
+    dct:description '''This ontology captures the terms and concepts used in the international standard NEN-ISO/IEC 19770-1:2018 regarding IT asset management. Each term is represented as a SKOS concept and grouped into a SKOS scheme. Concepts include assets, data, hardware, software, and their associated management processes. The ontology defines these terms with preferred labels, definitions, and identifiers, ensuring ease of use, reference, and sharing across information systems. 
+
+Here is an example of one such concept:
+
+    ```Example
+prefix nen-iso-iec-19770-1-2018: <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016/model/concept/>
+prefix dct:                      <http://purl.org/dc/terms/>
+prefix rdfs:                     <http://www.w3.org/2000/01/rdf-schema#>
+prefix skos:                     <http://www.w3.org/2004/02/skos/core#>
+
+# 3.24 InformationTechnology
+nen-iso-iec-19770-1-2018:InformationTechnology 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.24';
+    skos:prefLabel 'Information technology'@en,
+                   'Informatie Technologie'@nl;
+    skos:altLabel 'IT'@en,
+                  'IT'@nl;
+    skos:definition 'development, maintenance, and use of technology to acquire, process, store and distribute digital information'@en,
+                    'ontwikkeling, onderhoud en gebruik van technologie voor het verwerven, verwerken, opslaan en distribueren van digitale informatie'@nl;
+    skos:scopeNote 'Note 1 to entry: This excludes the use of technology to acquire, process, store and distribute information which is not digital, such as paper-based information. Examples which are excluded when not digitally captured are books, manuals, manuscripts, and whiteboards. For the purposes of this definition, "digital" is equivalent to "electronic".'@en;
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+```
+
+A total of 56 terms are modeled as SKOS concepts within the concept scheme of this ontology.'''@en ;
+
+    respec:background '''NEN-ISO/IEC 19770-1:2018 is a key standard for organizations aiming to implement or enhance IT asset management systems. It establishes a framework to help organizations manage their IT assets effectively, covering hardware, software, and data throughout their lifecycle. Benefits of adopting NEN-ISO/IEC 19770-1:2018 include improved asset visibility, optimized cost control, risk mitigation, and enhanced decision-making processes.
+
+At the same time, organizations want to use and share relevant information pertaining to IT asset management easily across information technology systems, business domains and communities. This requires IT asset management data to be meaningful and interoperable. Semantic web technology can fulfill this requirement.'''@en ;
+
+    respec:introduction '''This RDF-based ontology models the international standard NEN-ISO/IEC 19770-1:2018 for IT asset management. NEN-ISO/IEC 19770-1:2018 helps organizations manage IT assets by providing guidelines for the governance, lifecycle management, and strategic planning of IT assets. Key concepts in the standard include assets, hardware, software, and data management. The ontology itself, although modeling an official standard, has an informal status. It is published by the Dutch Ministry of Finance, with the kind approval of the NEN.'''@en ;
+
+    respec:objective '''The goal of the NEN-ISO/IEC 19770-1:2018 ontology is to provide an interoperable data model of the NEN standard, allowing the terms defined within the standard to be used and shared easily across information technology systems, business domains and communities. The ontology also enables the standard to be linked with other standards, facilitating compliance monitoring, comparative analysis and integration with broader IT asset management frameworks.'''@en ;
+
+    respec:audience '''The primary audience for the NEN-ISO/IEC 19770-1:2018 ontology includes IT asset managers, procurement teams, auditors, and IT governance professionals, as well as developers of IT asset management software.'''@en ;
+
+    respec:acknowledgements 'This standard has been developed with the kind approval of the Dutch standards organization NEN.'@en;
+
+    respec:relatedWork """This RDF-based ontology of the NEN-ISO/IEC 19770-1:2018 standard was created to provide a conceptual fundament for [ITAM](https://minfin-nl.github.io/ITAM/), an IT Asset Management ontology. ITAM provides a standardized vocabulary for modeling the IT Asset Management domain. It defines concepts, classes, properties, and relationships to represent IT assets, their attributes, and their interconnections within the IT Asset Management framework. These components of ITAM are linked to the NEN-ISO/IEC 19770-1:2018 ontology, wherever applicable."""@en;  
+
+    respec:specStatus "unofficial";
+    respec:latestVersion "https://github.com/MinFin-NL/NEN-ISO-IEC-19770-1-2018";
+    
+    dct:subject 'IT Asset Management'@en,
+          'IT Bedrijfsmiddelen Beheer'@nl, 
+          'Information Technology Asset Management'@en,
+          'Informatie Technologie Bedrijfsmiddelen Beheer'@nl, 
+          'CMDB'@en,
+          'CMDB'@nl, 
+          'Configuration Management'@en, 
+          'Configuratie Management'@nl,
+          'Configuration Management Database'@en,
+          'Configuratie Management Database'@nl;
+    dct:language 'iso639-1:en';
+    dct:license 'http://creativecommons.org/licenses/by/4.0'^^xsd:anyURI;
+    dct:publisher <https://www.rijksoverheid.nl/ministeries/ministerie-van-financien>;
+    dct:source <https://github.com/MinFin-NL/NEN-ISO-IEC-19770-1-2018>;
+    foaf:homepage 'https://github.com/MinFin-NL/NEN-ISO-IEC-19770-1-2018'^^xsd:anyURI;
+    owl:imports
+      dct:,
+      owl:,
+      rdf:,
+      rdfs:,
+      sh:,
+      skos:;
+    owl:versionInfo '0.1.0';
+    owl:versionIRI <https://github.com/MinFin-NL/NEN-ISO-IEC-19770-1-2018>;
+    vann:preferredNamespacePrefix 'NEN-ISO-IEC-19770-1-2018';
+    vann:preferredNamespaceUri 'https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016/model/concept/>'^^xsd:anyURI ;
+  sh:declare [  
+  sh:prefix "dcm" ;
+  sh:namespace "http://purl.org/dc/dcmitype/"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+  sh:prefix "dct" ;
+  sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+  sh:prefix "foaf" ;
+  sh:namespace "http://xmlns.com/foaf/0.1/"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+  sh:prefix "owl" ;
+  sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+  sh:prefix "rdf" ;
+  sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+  sh:prefix "rdfs" ;
+  sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+  sh:prefix "sh" ;
+  sh:namespace "http://www.w3.org/ns/shacl#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+  sh:prefix "skos" ;
+  sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+  sh:prefix "status" ;
+  sh:namespace "http://purl.org/adms/status/"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+  sh:prefix "vann" ;
+  sh:namespace "http://purl.org/vocab/vann/"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+  sh:prefix "void" ;
+  sh:namespace "http://rdfs.org/ns/void#"^^xsd:anyURI ;
+    ] ;
+    sh:declare [
+  sh:prefix "xsd" ;
+  sh:namespace "http://www.w3.org/2001/XMLSchema#"^^xsd:anyURI ;
+   ] ;
+    sh:declare [
+  sh:prefix "nen-iso-iec-19770-1-2018" ;
+  sh:namespace "https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016/model/concept/"^^xsd:anyURI ;
+   ] ;
+
+    void:subSet graph:model;
+    void:uriRegexPattern '^https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016/model/concept/>';
+    void:uriSpace 'https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016/model/concept/>'^^xsd:anyURI;
+
+    skos:example """
+prefix nen-iso-iec-19770-1-2018: <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016/model/concept/>
+prefix dct:                      <http://purl.org/dc/terms/>
+prefix rdfs:                     <http://www.w3.org/2000/01/rdf-schema#>
+prefix skos:                     <http://www.w3.org/2004/02/skos/core#>
+
+nen-iso-iec-19770-1-2018:Asset 
+   a skos:Concept;
+   skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+   dct:identifier '3.1';
+   skos:prefLabel 'Asset'@en,
+                  'Bedrijfsmiddel'@nl;
+   skos:altLabel 'Asset'@nl;
+   skos:definition 'item, thing or entity that has potential or actual value to an organization (3.38)'@en,
+                   'product, ding of entiteit die potentiële of daadwerkelijke waarde heeft voor een organisatie'@nl;
+   skos:scopeNote 'Note 1 to entry: Value can be tangible or intangible, financial or non-financial, and includes consideration of risks (3.48) and liabilities. It can be positive or negative at different stages of the asset life (3.2).'@en, 
+                  'Note 2 to entry: Physical assets usually refer to equipment, inventory and properties owned by the organization. Physical assets are the opposite of intangible assets, which are non-physical assets such as leases, brands, digital assets, use rights, licences, intellectual property rights, reputation or agreements.'@en, 
+                  'Note 3 to entry: A grouping of assets referred to as an asset system (3.7) could also be considered as an asset.'@en;
+   rdfs:seeAlso 'ISO 55000:2014, 3.2.1';
+   dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+   rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+"""@en,
+"""
+prefix nen-iso-iec-19770-1-2018: <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016/model/concept/>
+prefix dct:                      <http://purl.org/dc/terms/>
+prefix rdfs:                     <http://www.w3.org/2000/01/rdf-schema#>
+prefix skos:                     <http://www.w3.org/2004/02/skos/core#>
+
+nen-iso-iec-19770-1-2018:Asset 
+   a skos:Concept;
+   skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+   dct:identifier '3.1';
+   skos:prefLabel 'Asset'@en,
+                  'Bedrijfsmiddel'@nl;
+   skos:altLabel 'Asset'@nl;
+   skos:definition 'item, thing or entity that has potential or actual value to an organization (3.38)'@en,
+                   'product, ding of entiteit die potentiële of daadwerkelijke waarde heeft voor een organisatie'@nl;
+   skos:scopeNote 'Note 1 to entry: Value can be tangible or intangible, financial or non-financial, and includes consideration of risks (3.48) and liabilities. It can be positive or negative at different stages of the asset life (3.2).'@en, 
+                  'Note 2 to entry: Physical assets usually refer to equipment, inventory and properties owned by the organization. Physical assets are the opposite of intangible assets, which are non-physical assets such as leases, brands, digital assets, use rights, licences, intellectual property rights, reputation or agreements.'@en, 
+                  'Note 3 to entry: A grouping of assets referred to as an asset system (3.7) could also be considered as an asset.'@en;
+   rdfs:seeAlso 'ISO 55000:2014, 3.2.1';
+   dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+   rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+"""@nl.
+
+  ### Concepts
+
+  ### ISO 190770:2018 - Information technology - IT asset management - Part 1: IT asset management systems - Requirements
+
+  # Concept scheme
+  nen-iso-iec-19770-1-2018:scheme 
+    a skos:ConceptScheme;
+    skos:prefLabel 'Information technology - IT asset management - Part 1: IT asset management systems - Requirements'@en,
+                   'Information technology - IT asset management - Part 1: IT asset management systems - Requirements'@nl;
+    skos:definition 'The NEN-ISO/IEC 19770-1 standard specifies the requirements for the establishment, implementation, maintenance and improvement of a management system for IT asset management (ITAM), referred to as an “IT asset management system” (ITAMS)'@en,
+                    'De NEN-ISO/IEC 19770-1-norm specificeert de eisen voor het opzetten, implementeren, onderhouden en verbeteren van een managementsysteem voor IT asset management (ITAM), ook wel een “IT asset management system” (ITAMS) genoemd'@nl;
+    dct:identifier 'NEN-ISO/IEC 19770-1:2018';
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.1 Asset
+  nen-iso-iec-19770-1-2018:Asset 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.1';
+    skos:prefLabel   'Asset'@en,
+            'Bedrijfsmiddel'@nl;
+    skos:altLabel  'Asset'@nl;
+    skos:definition 'item, thing or entity that has potential or actual value to an organization (3.38)'@en,
+            'product, ding of entiteit die potentiële of daadwerkelijke waarde heeft voor een organisatie'@nl;
+    skos:scopeNote   'Note 1 to entry: Value can be tangible or intangible, financial or non-financial, and includes consideration of risks (3.48) and liabilities. It can be positive or negative at different stages of the asset life (3.2).'@en, 
+            'Note 2 to entry: Physical assets usually refer to equipment, inventory and properties owned by the organization. Physical assets are the opposite of intangible assets, which are non-physical assets such as leases, brands, digital assets, use rights, licences, intellectual property rights, reputation or agreements.'@en, 
+            'Note 3 to entry: A grouping of assets referred to as an asset system (3.7) could also be considered as an asset.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.2.1';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.2 AssetLife
+  nen-iso-iec-19770-1-2018:AssetLife 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.2';
+    skos:prefLabel   'Asset life'@en,
+            'Bedrijfsmiddel levensduur'@nl;
+    skos:altLabel  'Asset levensduur'@nl;
+    skos:definition 'period from asset (3.1) creation to asset end-of-life'@en,
+            'periode vanaf de creatie van het bedrijfsmiddel (3.1) tot het einde van de levensduur'@nl;
+    rdfs:seeAlso 'ISO 55000:2014, 3.2.2';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.3 AssetManagement
+  nen-iso-iec-19770-1-2018:AssetManagement 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.3';
+    skos:prefLabel   'Asset management'@en,
+            'Bedrijfsmiddelenbeheer'@nl;
+    skos:altLabel  'Asset management'@nl,
+            'Asset beheer'@nl;
+    skos:definition 'coordinated activity of an organization to realize value from assets'@en,
+            'gecoördineerde activiteit van een organisatie om waarde uit bedrijfsmiddelen te realiseren'@nl;
+    skos:scopeNote 'Note 1 to entry: Realization of value will normally involve a balancing of costs, risks (3.48), opportunities and performance (3.42) benefits'@en, 
+            'Note 2 to entry: Activity can also refer to the application of the elements of the asset management system (3.5).'@en, 
+            'Note 3 to entry: The term “activity” has a broad meaning and can include, for example, the approach, the planning, the plans and their implementation.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.3.1';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.4 AssetManagementPlan
+  nen-iso-iec-19770-1-2018:AssetManagementPlan 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.4';
+    skos:prefLabel   'Asset management plan'@en,
+            'Bedrijfsmiddelenbeheerplan'@nl;
+    skos:altLabel  'Asset beheerplan'@nl;
+    skos:definition 'documented information (3.19) that specifies the activities, resources and timescales required for an individual asset (3.1), or a grouping of assets, to achieve the organization’s (3.38)asset management (3.3)objectives (3.37)'@en,
+            '''gedocumenteerde informatie (3.19) die de activiteiten, middelen en tijdschema's specificeert die nodig zijn voor een individueel bedrijfsmiddel (3.1), of een groep middelen, om de doelstellingen van de organisatie (3.38) op het gebied van asset management (3.3) te bereiken (3.37)'''@nl;
+    skos:scopeNote   'Note 1 to entry: The grouping of assets may be by asset type (3.8), asset class, asset system (3.7) or asset portfolio (3.6).'@en, 
+            'Note 2 to entry: An asset management plan is derived from the strategic asset management plan (3.53).'@en, 
+            'Note 3 to entry: An asset management plan may be contained in, or may be a subsidiary plan of, the strategic asset management plan.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.3.3';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.5 AssetManagementSystem
+  nen-iso-iec-19770-1-2018:AssetManagementSystem 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.5';
+    skos:prefLabel   'Asset management system'@en,
+            'Bedrijfsmiddelenbeheersysteem'@nl;
+    skos:altLabel  'Assetmanagementsysteem'@nl;
+    skos:definition 'management system (3.33) for asset management (3.3) whose function is to establish the asset managementpolicy (3.43) and asset managementobjectives (3.37)'@en,
+            'beheersysteem (3.33) voor Bedrijfsmiddelenbeheer (3.3) met als functie het vaststellen van het beheerbeleid (3.43) en de middelenbeheerdoelstellingen (3.37)'@nl;
+    skos:scopeNote 'Note 1 to entry: The asset management system is a subset of asset management.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.4.3';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.6 AssetPortfolio
+  nen-iso-iec-19770-1-2018:AssetPortfolio 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.6';
+    skos:prefLabel   'Asset portfolio'@en,
+            'Bedrijfsmiddel portfolio'@nl;
+    skos:definition 'assets (3.1) that are within the scope of the asset management system (3.5)'@en,
+            'Bedrijfsmiddelen (3.1) die binnen de reikwijdte van het assetmanagementsysteem vallen (3.5)'@nl;
+    skos:scopeNote   'Note 1 to entry: A portfolio is typically established and assigned for managerial control purposes. Portfolios for physical hardware might be defined by category (e.g. plant, equipment, tools, land). Software portfolios might be defined by software publisher, or by platform (e.g. PC, server, mainframe).'@en,
+            'Note 2 to entry: An asset management system can encompass multiple asset portfolios. Where multiple asset portfolios and asset management systems are employed, asset management (3.3) activities should be coordinated between the portfolios and systems.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.2.4';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.7 AssetSystem
+  nen-iso-iec-19770-1-2018:AssetSystem 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.7';
+    skos:prefLabel   'Asset system'@en,
+            'Bedrijfsmiddel systeem'@nl;
+    skos:definition 'set of assets (3.1) that interact or are interrelated'@en,
+            'reeks bedrijfsmiddelen (3.1) die op elkaar inwerken of met elkaar verbonden zijn'@nl;
+    rdfs:seeAlso 'ISO 55000:2014, 3.2.5';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.8 AssetType
+  nen-iso-iec-19770-1-2018:AssetType 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.8';
+    skos:prefLabel   'Asset type'@en,
+            'Type bedrijfsmiddel'@nl;
+    skos:definition 'grouping of assets (3.1) having common characteristics that distinguish those assets as a group or class'@en,
+            'groepering van bedrijfsmiddelen (3.1) met gemeenschappelijke kenmerken die deze middelen als groep of klasse onderscheiden'@nl;
+    skos:example 'Physical assets, information assets, intangible assets, critical assets (3.15), enabling assets, linear assets, information and communications technology (ICT) assets, infrastructure assets, moveable assets.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.2.6';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.9 Audit
+  nen-iso-iec-19770-1-2018:Audit 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.9';
+    skos:prefLabel 'Audit'@en,
+            'Controle'@nl;
+    skos:altLabel  'Audit'@nl;
+    skos:definition 'systematic, independent and documentedprocess (3.46) for obtaining audit evidence and evaluating it objectively to determine the extent to which the audit criteria are fulfilled'@en,
+            'systematisch, onafhankelijk en gedocumenteerd proces (3.46) voor het verkrijgen van auditinformatie en het objectief evalueren ervan om te bepalen in welke mate aan de auditcriteria wordt voldaan'@nl;
+    skos:scopeNote   'Note 1 to entry: An audit can be an internal audit (first party) or an external audit (second party or third party), and it can be a combined or integrated audit (combining two or more disciplines).'@en,
+            'Note 2 to entry: An internal audit is conducted by the organization itself, or by an external party on its behalf.'@en, 
+            'Note 3 to entry: “Audit evidence” and “audit criteria” are defined in ISO 19011.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.1, modified — Note 2 to entry has been added for conformance with Annex SL';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.10 Capability
+  nen-iso-iec-19770-1-2018:Capability 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.10';
+    skos:prefLabel   'Capability'@en,
+            'Bekwaamheid'@nl;
+    skos:definition '<asset management> measure of capacity and the ability of an entity (system, person or organization (3.38)) to achieve its objectives (3.37)'@en,
+            '<asset management> maatstaf voor de capaciteit en het vermogen van een entiteit (systeem, persoon of organisatie (3.38)) om haar doelstellingen te bereiken (3.37)'@nl;
+    skos:scopeNote 'Note 1 to entry: Asset management (3.3) capabilities include processes (3.46), resources, competences (3.11) and technologies to enable the effective and efficient development and delivery ofasset management plans (3.4) and asset life (3.2) activities, and their continual improvement (3.13).'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.2';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.11 Competence
+  nen-iso-iec-19770-1-2018:Competence 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.11';
+    skos:prefLabel 'Competence'@en,
+            'Competentie'@nl;
+    skos:definition 'ability to apply knowledge and skills to achieve intended results'@en,
+            'vermogen om kennis en vaardigheden toe te passen om de beoogde resultaten te bereiken'@nl;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.3';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.12 Conformity
+  nen-iso-iec-19770-1-2018:Conformity 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.12';
+    skos:prefLabel   'Conformity'@en,
+            'Conformiteit'@nl;
+    skos:definition 'fulfilment of a requirement (3.47)'@en,
+            'vervulling van een vereiste (3.47)'@nl;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.4';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.  
+
+  # 3.13 ContinualImprovement
+  nen-iso-iec-19770-1-2018:ContinualImprovement 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.13';
+    skos:prefLabel   'Continual improvement'@en,
+            'Continue verbetering'@nl;
+    skos:definition 'recurring activity to enhance performance (3.42)'@en,
+            'terugkerende activiteit om de prestaties te verbeteren (3.42)'@nl;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.5';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.14 CorrectiveAction
+  nen-iso-iec-19770-1-2018:CorrectiveAction 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.14';
+    skos:prefLabel   'Corrective action'@en,
+            'Corrigerende actie'@nl;
+    skos:definition 'action to eliminate the cause of a nonconformity (3.36) and to prevent recurrence'@en,
+            'actie om de oorzaak van een non-conformiteit (3.36) weg te nemen en herhaling te voorkomen'@nl;
+    skos:scopeNote 'Note 1 to entry: In the case of other undesirable outcomes, action is necessary to minimize or eliminate the causes and to reduce the impact or prevent recurrence. Such actions fall outside the concept of corrective action, in the sense of this definition.'@en;
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.15 CriticalAsset
+  nen-iso-iec-19770-1-2018:CriticalAsset 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    skos:broader nen-iso-iec-19770-1-2018:Asset;
+    dct:identifier '3.15';
+    skos:prefLabel   'Critical asset'@en,
+            'Cruciaal bedrijfsmiddel'@nl;
+    skos:definition 'asset (3.1) having potential to significantly impact on the achievement of the organization’s (3.38)objectives (3.37)'@en,
+            'Bedrijfsmiddel (3.1) die potentieel een significante impact kan hebben op het bereiken van de doelstellingen (3.37) van de organisatie (3.38)'@nl;
+    skos:scopeNote   'Note 1 to entry: Assets can be safety-critical, environment-critical or performance-critical (3.42) and can relate to legal, regulatory or statutory requirements (3.47).'@en,
+            'Note 2 to entry: Critical assets can refer to those assets necessary to provide services to critical customers.'@en, 
+            'Note 3 to entry: Asset systems (3.7) can be distinguished as being critical in a similar manner to individual assets.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.2.7';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.16 Data
+  nen-iso-iec-19770-1-2018:Data 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.16';
+    skos:prefLabel   'Data'@en,
+            'Gegevens'@nl;
+    skos:altLabel  'Data'@nl;
+    skos:definition 'facts about an object'@en,
+            'feiten over een object'@nl;
+    skos:scopeNote 'Note 1 to entry: In the context of IT asset management systems (3.28), data may be a captured, measured or recorded representation of information, before it is analysed, interpreted or processed. Data may relate to objects such as facts, events, things, processes, or ideas, including concepts that within a certain context have a particular meaning related to IT assets.'@en;
+    rdfs:seeAlso 'ISO 9000:2015, 3.8.1, modified — Note 1 has been added, modified from ISO 15784‑1 and ISO/IEC 2382]';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.17 DigitalAsset
+  nen-iso-iec-19770-1-2018:DigitalAsset 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    skos:broader nen-iso-iec-19770-1-2018:Asset;
+    dct:identifier '3.17';
+    skos:prefLabel   'Digital asset'@en,
+            'Digitaal Bedrijfsmiddel'@nl;
+    skos:definition 'IT asset (3.25) expressed electronically in a digital format'@en,
+            'IT-middel (3.25), elektronisch uitgedrukt in een digitaal formaat'@nl;
+    skos:scopeNote 'Note 1 to entry: Digital assets include software assets (3.50), and digital informationcontent assets (3.18).'@en;
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.18 DigitalInformationContentAsset
+  nen-iso-iec-19770-1-2018:DigitalInformationContentAsset 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    skos:broader nen-iso-iec-19770-1-2018:DigitalAsset;
+    dct:identifier '3.18';
+    skos:prefLabel   'Digital information content asset'@en,
+            'Digitale informatie-inhoud'@nl;
+    skos:definition 'Digital asset (3.17) with information content'@en,
+            'Digitaal bedrijfsmiddel (3.17) met informatie-inhoud'@nl;
+    skos:example 'Documents, audio, video, graphics, databases, free-standing dictionaries; often licensed.'@en;
+    skos:scopeNote 'Note 1 to entry: ITAM can include management of these assets as whole entities, e.g. for license compliance, but excludes management of the content.'@en;
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.19 DocumentedInformation
+  nen-iso-iec-19770-1-2018:DocumentedInformation 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.19';
+    skos:prefLabel   'Documented information'@en,
+            'Gedocumenteerde informatie'@nl;
+    skos:definition 'information required to be controlled and maintained by an organization (3.38) and the medium on which it is contained'@en,
+            'informatie die moet worden beheerd en onderhouden door een organisatie (3.38) en het medium waarop deze is opgeslagen'@nl;
+    skos:scopeNote 'Note 1 to entry: Documented information can be in any format and media and from any source.'@en,
+    '''Note 2 to entry: Documented information can refer to:
+    —   the management system (3.33), including related processes (3.46);
+    —   information created in order for the organization to operate (documentation);
+    —   evidence of results achieved (e.g. records, key performance indicators).'''@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.6';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.20 Effectiveness
+  nen-iso-iec-19770-1-2018:Effectiveness 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.20';
+    skos:prefLabel   'Effectiveness'@en,
+            'Effectiviteit'@nl;
+    skos:definition 'extent to which planned activities are realized and planned results achieved'@en,
+            'mate waarin geplande activiteiten worden gerealiseerd en geplande resultaten worden behaald'@nl;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.7';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.21 Hardware
+  nen-iso-iec-19770-1-2018:Hardware 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.21';
+    skos:prefLabel 'Hardware'@en,
+            'Hardware'@nl;
+    skos:definition 'physical equipment used to process, store, or transmit computer programs or data'@en,
+            '''fysieke apparatuur die wordt gebruikt voor het verwerken, opslaan of verzenden van computerprogramma's of gegevens'''@nl;
+    rdfs:seeAlso 'ISO/IEC/IEEE 24765:2010, 3.1278';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.22 Incident
+  nen-iso-iec-19770-1-2018:Incident 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.22';
+    skos:prefLabel   'Incident'@en,
+            'Incident'@nl;
+    skos:definition 'unplanned event or occurrence resulting in damage or other loss'@en,
+            'ongeplande gebeurtenis of gebeurtenis die schade of ander verlies tot gevolg heeft'@nl;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.8';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.23 Information
+  nen-iso-iec-19770-1-2018:Information 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.23';
+    skos:prefLabel   'Information'@en,
+            'Informatie'@nl;
+    skos:definition 'meaningful data'@en,
+            'betekenisvolle gegevens'@nl;
+    skos:scopeNote   'Note 1 to entry: In the context of IT asset management systems (3.28), information may be data that has been converted, analysed, interpreted or compiled, to which meaning is assigned, according to context and assumed conventions. The underlying data may relate to objects such as facts, events, things, processes, or ideas, including concepts, that within a certain context have a particular meaning related to IT assets (3.25).'@en,
+            'Note 2 to entry: In the context of IT asset management systems, information may be recorded digitally or physically (e.g. on paper).'@en;
+    rdfs:seeAlso 'ISO 9000:2015, 3.8.2, modified — Note 1 to entry modified from ISO/TR 12037, ISO/TR 21089 and ISO/IEC 2382) and Note 2 to entry has been added.';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.24 InformationTechnology
+  nen-iso-iec-19770-1-2018:InformationTechnology 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.24';
+    skos:prefLabel   'Information technology'@en,
+            'Informatie Technologie'@nl;
+    skos:altLabel 'IT'@en,
+            'IT'@nl;
+    skos:definition 'development, maintenance, and use of technology to acquire, process, store and distribute digital information'@en,
+            'ontwikkeling, onderhoud en gebruik van technologie voor het verwerven, verwerken, opslaan en distribueren van digitale informatie'@nl;
+    skos:scopeNote 'Note 1 to entry: This excludes the use of technology to acquire, process, store and distribute information which is not digital, such as paper-based information. Examples which are excluded when not digitally captured are books, manuals, manuscripts, and whiteboards. For the purposes of this definition, "digital" is equivalent to "electronic".'@en;
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.25 IT-Asset
+  nen-iso-iec-19770-1-2018:IT-Asset 
+    a skos:Concept;
+    skos:broader nen-iso-iec-19770-1-2018:Asset;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.25';
+    skos:prefLabel   'IT asset'@en,
+            'IT-Bedrijfsmiddel'@nl;
+    skos:altLabel  'IT-middel'@nl;
+    skos:definition 'item, thing, or entity that can be used to acquire, process, store and distribute digital information and has potential or actual value to an organization'@en,
+            'product, ding of entiteit dat kan worden gebruikt voor het verwerven, verwerken, opslaan en distribueren van digitale informatie en dat potentiële of daadwerkelijke waarde heeft voor een organisatie'@nl;
+    skos:scopeNote '''Note 1 to entry: IT assets include:
+    —   software (3.49);
+    —   media (physical and digital);
+    —   IT equipment (physical and virtual);
+    —   licenses (including proof of license);
+    —   contracts; and
+    —   ITAM system management assets (including ITAM systems and tools, and the metadata needed to manage all IT assets).'''@en, 
+    'Note 2 to entry: Services to meet IT asset management (3.26)requirements (3.47), typically externally supplied, can also be considered IT assets, such as "software-as-a-service", hardware maintenance, software support, and training.'@en, 
+    'Note 3 to entry: Digital information content assets (3.18) are files or other entities with information content, but they are not considered software. For example, there may be collections of standards in digital form; media collections; and credit agency rating information. Such assets may be licensed, and therefore may benefit from being managed using the discipline of IT asset management.'@en,
+    'Note 4 to entry: Information per se, independent of IT hardware and software assets, can be considered an asset (3.1), but it is not considered an IT asset.'@en,
+    'Note 5 to entry: The collective set of IT assets is also referred to as the IT infrastructure (3.30).'@en;
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.26 IT-AssetManagement
+  nen-iso-iec-19770-1-2018:IT-AssetManagement 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.26';
+    skos:prefLabel 'IT asset management'@en,
+            'IT-bedrijfsmiddelenbeheer'@nl;
+    skos:altLabel 'ITAM'@en,
+            'ITAM'@nl;
+    skos:definition 'coordinated activity of an organization (3.38) to realize value from IT assets (3.25)'@en,
+            'gecoördineerde activiteit van een organisatie (3.38) om waarde te realiseren uit IT-middelen (3.25)';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.27 IT-AssetManagementPlan
+  nen-iso-iec-19770-1-2018:IT-AssetManagementPlan 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.27';
+    skos:prefLabel 'IT asset management plan'@en,
+            'IT-bedrijfsmiddelen beheerplan'@nl;
+    skos:definition 'documented information (3.19) that specifies the activities, resources and timescales required for an individual IT asset (3.25), or a grouping of IT assets, to achieve the organization’s (3.38)IT asset management (3.26)objectives (3.37)'@en,
+            '''gedocumenteerde informatie (3.19) die de activiteiten, middelen en tijdschema's specificeert die nodig zijn voor een individueel IT-bedrijfsmiddel (3.25), of een groep IT-middelen, om de doelstellingen van het IT-bedrijfsmiddelenbeheer (3.26) van de organisatie te bereiken (3.37)'''@nl;
+    skos:scopeNote   'Note 1 to entry: The grouping of assets may be by asset type (3.8), asset class, asset system (3.7) or IT asset portfolio (3.29).'@en,
+            'Note 2 to entry: An IT asset management plan is derived from the strategic IT asset management plan (3.54).'@en,
+            'Note 3 to entry: An IT asset management plan may be contained in, or may be a subsidiary plan of, the strategic IT asset management plan.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.3.3, modified — asset management plan has become IT asset management plan and all notes have been made discipline-specific';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.28 IT-AssetManagementSystem
+  nen-iso-iec-19770-1-2018:IT-AssetManagementSystem 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.28';
+    skos:prefLabel 'IT asset management system'@en,
+            'IT-bedrijfsmiddelen beheersysteem'@nl;
+    skos:altLabel 'ITAMS'@en;
+    skos:definition 'management system (3.33) for IT asset management (3.26) whose function is to establish the IT asset management policy (3.43) and IT asset managementobjectives (3.37)'@en,
+            'beheersysteem (3.33) voor IT-bedrijfsmiddelenbeheer (3.26) met als functie het vaststellen van het IT-middelenbeheerbeleid (3.43) en de IT-middelenbeheerdoelstellingen (3.37)'@nl;
+    skos:scopeNote 'Note 1 to entry: The asset management system is a subset of asset management.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.4.3, modified — asset management system has become IT asset management system and definition as well as notes have become discipline-specific'@en;
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.29 IT-AssetPortfolio
+  nen-iso-iec-19770-1-2018:IT-AssetPortfolio 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.29';
+    skos:prefLabel 'IT asset portfolio'@en,
+            'IT-bedrijfsmiddel portfolio'@nl;
+    skos:definition 'IT assets (3.25) that are within the scope of the IT asset management system (3.28)'@en,
+            'IT-bedrijfsmiddelen (3.25) die binnen het domein van het IT-middelenbeheersysteem vallen (3.28)'@nl;
+    skos:scopeNote   'Note 1 to entry: A portfolio is typically established and assigned for managerial control purposes. Portfolios for IT hardware might be defined by category (e.g. servers, PCs, mobile devices). Software portfolios might be defined by software publisher, or by platform (e.g. PC, server, mainframe).'@en,
+            'Note 2 to entry: An IT asset management system can encompass multiple IT asset portfolios.'@en,
+            'Note 3 to entry: See also asset portfolio (3.6).'@en;
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.30 IT-Infrastructure
+  nen-iso-iec-19770-1-2018:IT-Infrastructure 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.30';
+    skos:prefLabel 'IT infrastructure'@en,
+            'IT-infrastructuur'@nl;
+    skos:definition 'combined set of IT assets (3.25) for developing, maintaining, and using IT services'@en,
+            'gecombineerde set IT-middelen (3.25) voor het ontwikkelen, onderhouden en gebruiken van IT-diensten'@nl;
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.31 LevelOfService
+  nen-iso-iec-19770-1-2018:LevelOfService 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.31';
+    skos:prefLabel 'Level of service'@en,
+            'Niveau van dienstverlening'@nl;
+    skos:definition 'parameters, or combination of parameters, which reflect social, political, environmental and economic outcomes that the organization (3.38) delivers'@en,
+            'parameters, of een combinatie van parameters, die de sociale, politieke, ecologische en economische resultaten weerspiegelen die de organisatie (3.38) levert'@nl;
+    skos:scopeNote 'Note 1 to entry: The parameters can include safety, customer satisfaction, quality, quantity, capacity, reliability, responsiveness, environmental acceptability, cost and availability.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.3.6';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.32 LifeCycle
+  nen-iso-iec-19770-1-2018:LifeCycle 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.32';
+    skos:prefLabel 'life cycle'@en,
+            'Levenscyclus'@nl;
+    skos:definition 'stages involved in the management of an asset (3.1)'@en,
+            'fasen van het beheer van een bedrijfsmiddel (3.1)'@nl;
+    skos:scopeNote 'Note 1 to entry: The naming and number of the stages and the activities under each stage usually vary in different industry sectors and are determined by the organization (3.38).'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.2.3';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.33 ManagementSystem
+  nen-iso-iec-19770-1-2018:ManagementSystem 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.33';
+    skos:prefLabel 'Management system'@en,
+            'Beheersysteem'@nl;
+    skos:altLabel  'Managementsysteem'@nl;
+    skos:definition 'set of interrelated or interacting elements of an organization (3.38) to establish policies (3.43) and objectives (3.37) and processes (3.46) to achieve those objectives'@en,
+            'reeks onderling verbonden of op elkaar inwerkende elementen van een organisatie (3.38) om beleid (3.43) en doelstellingen (3.37) en processen (3.46) vast te stellen om die doelstellingen te bereiken'@nl;
+    skos:scopeNote   'Note 1 to entry: A management system can address a single discipline or several disciplines.'@en,
+            'Note 2 to entry: The system elements include the organization’s structure, roles and responsibilities, planning, and operation, etc.'@en,
+            'Note 3 to entry: The scope of a management system may include the whole of the organization, specific and identified functions of the organization, specific and identified sections of the organization, or one or more functions across a group of organizations.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.4.2, modified — ‘and’ has been added to Note 2 to entry for conformance with Annex SL';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.34 Measurement
+  nen-iso-iec-19770-1-2018:Measurement 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.34';
+    skos:prefLabel 'Measurement'@en,
+            'Meting'@nl;
+    skos:definition 'process (3.46) to determine a value'@en,
+            'proces (3.46) om een waarde te bepalen'@nl;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.10';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.35 Monitoring
+  nen-iso-iec-19770-1-2018:Monitoring 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.35';
+    skos:prefLabel 'Monitoring'@en,
+            'Monitoring'@nl;
+    skos:definition 'determining the status of a system, a process (3.46) or an activity'@en,
+            'het vaststellen van de status van een systeem, een proces (3.46) of een activiteit'@nl;
+    skos:scopeNote   'Note 1 to entry: To determine the status, there may be a need to check, supervise or critically observe.'@en,
+            'Note 2 to entry: For the purposes of asset management, monitoring may also refer to determining the status of an asset. This is typically referred to as “condition monitoring” or “performance monitoring”.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.9';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.36 Nonconformity
+  nen-iso-iec-19770-1-2018:Nonconformity 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.36';
+    skos:prefLabel 'Nonconformity'@en,
+            'Non-conformiteit'@nl;
+    skos:definition 'non-fulfilment of a requirement (3.47)'@en,
+            'niet voldoen aan een eis (3.47)'@nl;
+    skos:scopeNote 'Note 1 to entry: Nonconformity can be any deviation from asset management system (3.5) requirements, or from relevant work standards, practices, procedures, legal requirements, etc.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.11';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.37 Objective
+  nen-iso-iec-19770-1-2018:Objective 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.37';
+    skos:prefLabel 'Objective'@en,
+            'Doelstelling'@nl;
+    skos:definition 'result to be achieved'@en,
+            'te behalen resultaat'@nl;
+    skos:scopeNote   'Note 1 to entry: An objective can be strategic, tactical or operational.'@en,
+            'Note 2 to entry: Objectives can relate to different disciplines (such as financial, health and safety, and environmental goals) and can apply at different levels (such as strategic, organization-wide, project, product and process (3.46)).'@en, 
+            'Note 3 to entry: An objective can be expressed in other ways, e.g. as an intended outcome, a purpose, an operational criterion, as an asset management (3.3) objective or by the use of other words with similar meaning (e.g. aim, goal, or target).'@en,
+            'Note 4 to entry: In the context of asset management systems (3.5), asset management objectives are set by the organization (3.38), consistent with the organizational objectives (3.39) and asset management policy (3.43), to achieve specific measurable results.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.12, modified — ‘as’ has been added to Note 3 for conformance with Annex SL';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.38 Organization
+  nen-iso-iec-19770-1-2018:Organization 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.38';
+    skos:prefLabel 'Organization'@en,
+            'Organisatie'@nl;
+    skos:definition 'person or group of people that has its own functions with responsibilities, authorities and relationships to achieve its objectives (3.37)'@en,
+            'persoon of groep mensen die zijn eigen functies heeft met verantwoordelijkheden, bevoegdheden en relaties om zijn doelstellingen te bereiken (3.37)'@nl;
+    skos:scopeNote 'Note 1 to entry: The concept of organization includes, but is not limited to, sole-trader, company, corporation, firm, enterprise, authority, partnership, charity or institution, or part or combination thereof, whether incorporated or not, public or private.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.13';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.39 OrganizationalObjective
+  nen-iso-iec-19770-1-2018:OrganizationalObjective 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.39';
+    skos:prefLabel 'Organizational objective'@en,
+            'Organisatiedoelstelling'@nl;
+    skos:definition 'overarching objective (3.37) that sets the context and direction for an organization’s (3.38) activities'@en,
+            'overkoepelende doelstelling (3.37) die de context en richting bepaalt voor de activiteiten van een organisatie (3.38)'@nl;
+    skos:scopeNote 'Note 1 to entry: Organizational objectives are established through the strategic level planning activities of the organization.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.14';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.40 OrganizationalPlan
+  nen-iso-iec-19770-1-2018:OrganizationalPlan 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.40';
+    skos:prefLabel 'Organizational plan'@en,
+            'Organisatieplan'@nl;
+    skos:definition 'gedocumenteerde informatie (3.19) die de programma’s specificeert om de organisatiedoelstellingen te bereiken (3.39)'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.15';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.41 Outsource
+  nen-iso-iec-19770-1-2018:Outsource 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.41';
+    skos:prefLabel 'Outsource (verb)'@en,
+            'Uitbesteden'@nl;
+    skos:definition 'make an arrangement where an external organization (3.38) performs part of an organization’s function or process (3.46)'@en,
+            'een regeling treffen waarbij een externe organisatie (3.38) een deel van de functie of het proces van een organisatie uitvoert (3.46)'@nl;
+    skos:scopeNote 'Note 1 to entry: An external organization is outside the scope of the management system (3.33), although the outsourced function or process is within the scope if its activities influence the effectiveness of the asset management system (3.5).'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.16';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.42 Performance
+  nen-iso-iec-19770-1-2018:Performance 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.42';
+    skos:prefLabel 'Performance'@en,
+            'Prestatie'@nl;
+    skos:definition 'measurable result'@en,
+            'meetbaar resultaat'@nl;
+    skos:scopeNote   'Note 1 to entry: Performance can relate either to quantitative or qualitative findings.'@en,
+            'Note 2 to entry: Performance can relate to the management of activities, processes (3.46), products (including services), systems or organizations (3.38).'@en, 
+            'Note 3 to entry: For the purposes of asset management (3.3), performance can relate to assets (3.1) in their ability to fulfil requirements (3.47) or objectives (3.37).'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.17, modified — the spelling of ‘measurable’ has been changed for conformance with Annex SL';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.43 Policy
+  nen-iso-iec-19770-1-2018:Policy 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.43';
+    skos:prefLabel 'Policy'@en,
+            'Beleid'@nl;
+    skos:definition 'intentions and direction of an organization (3.38), as formally expressed by its top management (3.55)'@en,
+            'intenties en richting van een organisatie (3.38), zoals formeel uitgedrukt door het topmanagement (3.55)'@nl;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.18, modified — a comma has been added for conformance with Annex SL';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.44 PredictiveAction
+  nen-iso-iec-19770-1-2018:PredictiveAction 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.44';
+    skos:prefLabel 'Predictive action'@en,
+            'Voorspellende handeling'@nl;
+    skos:definition 'action to monitor the condition of an asset (3.1) and predict the need for preventive action (3.45) or corrective action (3.14)'@en,
+            'actie om de toestand van een bedrijfsmiddel te monitoren (3.1) en de noodzaak van preventieve actie (3.45) of corrigerende actie (3.14) te voorspellen'@nl;
+    skos:scopeNote 'Note 1 to entry: Predictive action is also commonly referred to as either “condition monitoring” or “performance monitoring”.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.3.5';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.45 PreventiveAction
+  nen-iso-iec-19770-1-2018:PreventiveAction 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.45';
+    skos:prefLabel 'Preventive action'@en,
+            'Preventieve handeling'@nl;
+    skos:definition 'action to eliminate the cause of a potential nonconformity (3.36) or other undesirable potential situation'@en,
+            'actie om de oorzaak van een potentiële non-conformiteit (3.36) of een andere ongewenste potentiële situatie weg te nemen'@nl;
+    skos:scopeNote   'Note 1 to entry: This definition is specific to asset management (3.3) activities only.'@en,
+            'Note 2 to entry: There can be more than one cause for a potential nonconformity.'@en,
+            'Note 3 to entry: Preventive action is taken to prevent occurrence and to preserve an asset’s (3.1) function, whereas corrective action (3.14) is taken to prevent recurrence.'@en,
+            'Note 4 to entry: Preventive action is normally carried out while the asset is functionally available and operable or prior to the initiation of functional failure.'@en,
+            'Note 5 to entry: Preventive action includes the replenishment of consumables where the consumption is a functional requirement (3.47).'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.3.4';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.46 Process
+  nen-iso-iec-19770-1-2018:Process 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.46';
+    skos:prefLabel 'Process'@en,
+            'Proces'@nl;
+    skos:definition 'set of interrelated or interacting activities which transforms inputs into outputs'@en,
+            'reeks onderling verbonden of op elkaar inwerkende activiteiten die input in output transformeren'@nl;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.19';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.47 Requirement
+  nen-iso-iec-19770-1-2018:Requirement 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.47';
+    skos:prefLabel 'Requirement'@en,
+            'Eis'@nl;
+    skos:definition 'need or expectation that is stated, generally implied or obligatory'@en,
+            'behoefte of verwachting die wordt uitgesproken, doorgaans impliciet of verplicht'@nl;
+    skos:scopeNote   'Note 1 to entry: “Generally implied” means that it is custom or common practice for the organization (3.38) and stakeholders (3.52) that the need or expectation under consideration is implied.'@en, 
+            'Note 2 to entry: A specified requirement is one that is stated, for example in documented information (3.19).'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.20';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.48 Risk
+  nen-iso-iec-19770-1-2018:Risk 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.48';
+    skos:prefLabel 'Risk'@en,
+            'Risico'@nl;
+    skos:definition 'effect of uncertainty on objectives (3.37)'@en,
+            'effect van onzekerheid op doelstellingen (3.37)'@nl;
+    skos:scopeNote   'Note 1 to entry: An effect is a deviation from the expected — positive and/or negative.'@en, 
+            'Note 2 to entry: Objectives can relate to different disciplines (such as financial, health and safety, and environmental goals) and can apply at different levels (such as strategic, organization-wide, project, product and process (3.46)).'@en, 
+            'Note 3 to entry: Risk is often characterized by reference to potential “events” (as defined in ISO Guide 73:2009, 3.5.1.3) and “consequences” (as defined in ISO Guide 73:2009, 3.6.1.3), or a combination of these.'@en, 
+            'Note 4 to entry: Risk is often expressed in terms of a combination of the consequences of an event (including changes in circumstances) and the associated “likelihood” (as defined in ISO Guide 73:2009, 3.6.1.1) of occurrence.'@en, 
+            'Note 5 to entry: Uncertainty is the state, even partial, of deficiency of information related to, understanding or knowledge of, an event, its consequence, or likelihood.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.21, modified — wording has been added to Note 4 for conformance with Annex SL';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.49 Software
+  nen-iso-iec-19770-1-2018:Software 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.49';
+    skos:prefLabel 'Software'@en,
+            'Software'@nl;
+    skos:definition 'all or part of the programs which process or support the processing of digital information'@en,
+            '''alle of een deel van de programma's die digitale informatie verwerken of ondersteunen'''@nl;
+    skos:scopeNote   'Note 1 to entry: For the purposes of this definition, software excludes information per se, such as the content of documents, audio and video recordings, graphics, and databases.'@en,
+            'Note 2 to entry: There is both executable and non-executable software. The purpose of non-executable software is to control or support executable software, and includes, for example, configuration information, fonts, and spell-checker dictionaries. Digital information which is managed by executable software (e.g. the content of documents and databases) is not considered software for the purposes of this definition, even though program execution may depend on data values.'@en;
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.50 SoftwareAsset
+  nen-iso-iec-19770-1-2018:SoftwareAsset 
+    a skos:Concept;
+    skos:broader nen-iso-iec-19770-1-2018:DigitalAsset;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.50';
+    skos:prefLabel 'Software asset'@en,
+            'Softwarebedrijfsmiddel'@nl;
+    skos:definition 'software (3.49) that has potential or actual value to an organization'@en,
+            'software (3.49) die potentiële of daadwerkelijke waarde heeft voor een organisatie'@nl;
+    skos:scopeNote 'Note 1 to entry: Software may be a collection of software components, e.g. a software product may be a collection of thousands of software files.'@en;
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.51 SoftwareAssetManagement
+  nen-iso-iec-19770-1-2018:SoftwareAssetManagement 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.51';
+    skos:prefLabel 'Software asset management'@en,
+            'Software-bedrijfsmiddelenbeheer'@nl;
+    skos:altLabel 'SAM'@en;
+    skos:definition 'coordinated activity of an organization to realize value from software assets (3.50)'@en,
+            'gecoördineerde activiteit van een organisatie om waarde te realiseren uit softwarebedrijfsmiddelen (3,50)'@nl;
+    skos:scopeNote 'Note 1 to entry: Software asset management is a specialization of IT asset management (3.26) focused specifically on software assets. The management of software assets may, but does not necessarily, involve the management of non-software assets.'@en,
+            'Note 2 to entry: For reference, a corresponding industry definition is “all of the infrastructure and processes necessary for the effective management, control and protection of the software assets within an organization, throughout all stages of their life cycle”'@en;
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.52 Stakeholder
+  nen-iso-iec-19770-1-2018:Stakeholder 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.52';
+    skos:prefLabel 'Stakeholder'@en,
+            'Belanghebbende'@nl;
+    skos:definition 'person or organization (3.38) that can affect, be affected by, or perceive itself to be affected by a decision or activity'@en,
+            'persoon of organisatie (3.38) die een beslissing of activiteit kan beïnvloeden, erdoor beïnvloed kan worden, of zichzelf als beïnvloed ervaren'@nl;
+    skos:scopeNote 'Note 1 to entry: A “stakeholder” can also be referred to as an “interested party”.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.22, modified — ‘themselves’ has been changed to ‘itself’ for conformance with Annex SL';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.53 StrategicAssetManagementPlan
+  nen-iso-iec-19770-1-2018:StrategicAssetManagementPlan 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.53';
+    skos:prefLabel 'Strategic asset management plan'@en,
+            'Strategisch bedrijfsmiddelenbeheerplan'@nl;
+    skos:altLabel 'SAMP'@en;
+    skos:definition 'documented information (3.19) that specifies how organizational objectives (3.39) are to be converted into asset management (3.3)objectives (3.37), the approach for developing asset management plans (3.4), and the role of the asset management system (3.5) in supporting achievement of the asset management objectives'@en,
+            'gedocumenteerde informatie (3.19) die specificeert hoe organisatiedoelstellingen (3.39) moeten worden omgezet in bedrijfsmiddelenbeheer (3.3)doelstellingen (3.37), de aanpak voor het ontwikkelen van assetmanagementplannen (3.4) en de rol van het bedrijfsmiddelenbeheersysteem (3.5) bij het ondersteunen van het behalen van de doelstellingen op het gebied van middelenbeheerdoelstellingen'@nl;
+    skos:scopeNote   'Note 1 to entry: A strategic asset management plan is derived from the organizational plan (3.40).'@en,
+            'Note 2 to entry: A strategic asset management plan may be contained in, or may be a subsidiary plan of, the organizational plan.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.3.2';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.54 StrategicITAssetManagementPlan
+  nen-iso-iec-19770-1-2018:StrategicITAssetManagementPlan 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.54';
+    skos:prefLabel 'Strategic IT asset management plan'@en,
+            'Strategisch IT-bedrijfsmiddelen beheerplan'@nl;
+    skos:definition 'documented information (3.19) that specifies how organizational objectives (3.39) are to be converted into IT asset management (3.26)objectives (3.37), the approach for developing IT asset management plans (3.27), and the role of the IT asset management system (3.28) in supporting achievement of the IT asset management objectives'@en,
+            'gedocumenteerde informatie (3.19) die specificeert hoe organisatiedoelstellingen (3.39) moeten worden omgezet in IT-activabeheer (3.26) doelstellingen (3.37), de aanpak voor het ontwikkelen van IT-activabeheerplannen (3.27) en de rol van het IT-activabeheersysteem (3.28) bij het ondersteunen van de verwezenlijking van de IT-middelenbeheerdoelstellingen'@nl;
+    skos:scopeNote   'Note 1 to entry: A strategic IT asset management plan is derived from the organizational plan (3.40).',
+            'Note 2 to entry: A strategic IT asset management plan may be contained in, or may be a subsidiary plan of, the organizational plan.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.3.2, modified — term and definition have become discipline-specific';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.55 TopManagement
+  nen-iso-iec-19770-1-2018:TopManagement 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.55';
+    skos:prefLabel 'Top management'@en,
+            'Topmanagement'@nl;
+    skos:definition 'person or group of people who directs and controls an organization (3.38) at the highest level'@en,
+            'persoon of groep mensen die een organisatie (3.38) op het hoogste niveau leidt en controleert'@nl;
+    skos:scopeNote   'Note 1 to entry: Top management has the power to delegate authority and provide resources within the organization.'@en,
+            'Note 2 to entry: If the scope of the management system (3.33) covers only part of an organization, then top management refers to those who direct and control that part of the organization. If multiple asset management systems (3.5) are employed, the systems should be designed to coordinate efforts.'@en;
+    rdfs:seeAlso 'ISO 55000:2014, 3.1.23';
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+  # 3.56 TrustworthyData
+  nen-iso-iec-19770-1-2018:TrustworthyData 
+    a skos:Concept;
+    skos:inScheme nen-iso-iec-19770-1-2018:scheme;
+    dct:identifier '3.56';
+    skos:prefLabel 'Trustworthy data'@en,
+            'Betrouwbare gegevens'@nl;
+    skos:definition 'data (3.16) and relatedinformation (3.23) that is accurate, complete, relevant, readily understood by and available to those authorised users who need it to complete a task'@en,
+            'gegevens (3.16) en gerelateerde informatie (3.23) die accuraat, volledig, relevant en gemakkelijk te begrijpen zijn voor en beschikbaar zijn voor geautoriseerde gebruikers die deze nodig hebben om een taak te voltooien'@nl;
+    dct:source <https://www.nen.nl/nen-iso-iec-19770-1-2018-en-242016>;
+    rdfs:isDefinedBy nen-iso-iec-19770-1-2018:.
+
+}
